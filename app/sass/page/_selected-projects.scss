@@ -1,0 +1,50 @@
+.selected-projects {
+    h2.title {
+        margin-bottom: 4rem;
+    }
+
+    .selected-projects__item {
+        display: block;
+        border-top: 1px solid var(--border);
+        transition: all 0.3s;
+        padding: 32px 0;
+
+        @include respond(mobilemini) {
+          padding: 24px 0;
+        }
+
+        &:hover .selected-projects__heading svg{
+            opacity: 1;
+        }
+
+        &:hover h4.title {
+            color: var(--link-primary-hover-colour);
+        }
+
+        &:last-child {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .selected-projects__heading {
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-left: 8px;
+                opacity: 0;
+            }
+        }
+        h4.title {
+            color: var(--link-primary-colour);
+        }
+
+        .body-paragraph {
+            margin-top: 12px;
+            display: block;
+
+            @include respond(mobilemini) {
+              margin-top: 4px;
+            }
+        }
+    }
+}
