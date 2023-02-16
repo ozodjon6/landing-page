@@ -1,0 +1,51 @@
+.footer {
+  .footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(mobilemini) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .site-logo {
+      display: block;
+
+      @include respond(mobilemini) {
+        width: 115px;
+        height: 17px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .menu-list {
+      display: flex;
+      align-items: center;
+
+      & .menu-list__item {
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+
+        & .menu-list__link {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 160%;
+          color: var(--link-primary-colour);
+          text-decoration: none;
+          transition: all 0.3s;
+          letter-spacing: -0.01em;
+
+          @include respond(mobilemini) {
+            font-size: 14px;
+          }
+
+          &:hover {
+            color: var(--link-primary-hover-colour);
+          }
+        }
+      }
+    }
+  }
+}
