@@ -9,8 +9,11 @@ window.addEventListener('DOMContentLoaded', () => {
         hamburger.classList.toggle("open-modal");
     });
 
-    selectedProjectsItem.addEventListener("click", function(e) {
-        e.preventDefault();
-    });
+
+    for(let i = 0; i < selectedProjectsItem.length; i++) {
+        selectedProjectsItem[i].addEventListener("click", function(e) {
+            e.preventDefault();
+        });
+    }
 
 });

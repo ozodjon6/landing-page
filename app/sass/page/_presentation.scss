@@ -14,3 +14,134 @@
         width: 100%;
     }
 }
+
+// about-project
+
+.about-project {
+    padding-bottom: 12rem;
+}
+
+.about-project__info {
+    max-width: 498px;
+
+    @include respond(tablet) {
+        max-width: 397px;
+      }
+      @include respond(mobilemini) {
+        padding-bottom: 12rem;
+      }
+    h4.title {
+        color: var(--text-primary-colour);
+        margin-bottom: 24px;
+    }
+}
+
+// about-project__role
+
+.about-project__role-item {
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+    span {
+        display: block;
+    }
+
+    a {
+        color: var(--text-secondary-colour);
+    }
+
+    @include respond(mobilemini) {
+      .body-m {
+        font-size: 16px;
+      }
+    }
+}
+
+// inside-content
+
+.inside-content {
+    h1,h2,h3,h4,h5,h6 {
+        @include bold;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: var(--text-primary-colour);
+        margin-bottom: 24px;
+    }
+
+    h1 {
+        font-size: 46px;
+
+        @include respond(mobilemini) {
+          font-size: 24px;
+        }
+    }
+    h2 {
+        font-size: 32px;
+
+        @include respond(mobilemini) {
+          font-size: 22px;
+        }
+    }
+    h3 {
+        font-size: 28px;
+
+        @include respond(mobilemini) {
+          font-size: 20px;
+        }
+    }
+    h4 {
+        font-size: 24px;
+
+        @include respond(mobilemini) {
+          font-size: 18px;
+        }
+    }
+    h5 {
+        font-size: 20px;
+
+        @include respond(mobilemini) {
+          font-size: 16px;
+        }
+    }
+    h6 {
+        font-size: 18px;
+
+        @include respond(mobilemini) {
+          font-size: 16px;
+        }
+    }
+    
+    iframe {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        margin-bottom: 24px;
+    }
+
+    ul {
+        margin-bottom: 24px;
+        li {
+            letter-spacing: -0.01em;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 160%;
+        color: var(--link-primary-colour);
+
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+        }
+        
+    }
+
+    p,span,div {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: -0.01em;
+        color: var(--text-secondary-colour);
+    }
+}
