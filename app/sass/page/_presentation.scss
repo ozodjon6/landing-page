@@ -1,5 +1,5 @@
 .project-model {
-    padding-bottom: 12rem;
+    margin-bottom: 12rem;
 }
 .project-model__heading {
     max-width: 81.6rem;
@@ -18,7 +18,7 @@
 // about-project
 
 .about-project {
-    padding-bottom: 12rem;
+    margin-bottom: 12rem;
 }
 
 .about-project__info {
@@ -60,6 +60,17 @@
 // inside-content
 
 .inside-content {
+    margin-bottom: 18rem;
+
+    @include respond(mobilemini) {
+      margin-bottom: 12rem;
+    }
+
+    .inside-content__item {
+        &:not(:last-child) {
+            margin-bottom: 12rem
+        }
+    }
     h1,h2,h3,h4,h5,h6 {
         @include bold;
         line-height: 130%;
@@ -119,21 +130,34 @@
 
     img {
         margin-bottom: 24px;
+
+        &:first-child {
+            margin-bottom: 12rem;
+        }
     }
 
     ul {
+        @include respond(mobilemini) {
+          padding-left: 24px;
+        }
         margin-bottom: 24px;
         li {
             letter-spacing: -0.01em;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 160%;
-        color: var(--link-primary-colour);
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 160%;
+            color: var(--link-primary-colour);
+            list-style-type: inherit;
 
-        &:not(:last-child) {
-            margin-bottom: 4px;
-        }
-        }
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+
+                a {
+                    color: inherit;
+                    text-decoration: underline;
+                }
+            }
         
     }
 

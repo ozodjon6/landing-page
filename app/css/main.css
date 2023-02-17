@@ -933,7 +933,7 @@ only screen and (min-device-pixel-ratio:1.5) {
   margin-top: 4px
 }
 .project-model {
-  padding-bottom: 12rem
+  margin-bottom: 12rem
 }
 .project-model__heading {
   max-width: 81.6rem;
@@ -946,7 +946,7 @@ only screen and (min-device-pixel-ratio:1.5) {
   width: 100%
 }
 .about-project {
-  padding-bottom: 12rem
+  margin-bottom: 12rem
 }
 .about-project__info {
   max-width: 498px
@@ -978,6 +978,17 @@ only screen and (min-device-pixel-ratio:1.5) {
   .about-project__role-item .body-m {
     font-size: 16px
   }
+}
+.inside-content {
+  margin-bottom: 18rem
+}
+@media (max-width:767px) {
+  .inside-content {
+    margin-bottom: 12rem
+  }
+}
+.inside-content .inside-content__item:not(:last-child) {
+  margin-bottom: 12rem
 }
 .inside-content h1,
 .inside-content h2,
@@ -1047,18 +1058,31 @@ only screen and (min-device-pixel-ratio:1.5) {
 .inside-content img {
   margin-bottom: 24px
 }
+.inside-content img:first-child {
+  margin-bottom: 12rem
+}
 .inside-content ul {
   margin-bottom: 24px
+}
+@media (max-width:767px) {
+  .inside-content ul {
+    padding-left: 24px
+  }
 }
 .inside-content ul li {
   letter-spacing: -.01em;
   font-weight: 400;
   font-size: 18px;
   line-height: 160%;
-  color: var(--link-primary-colour)
+  color: var(--link-primary-colour);
+  list-style-type: inherit
 }
 .inside-content ul li:not(:last-child) {
-  margin-bottom: 4px
+  margin-bottom: 8px
+}
+.inside-content ul li a {
+  color: inherit;
+  text-decoration: underline
 }
 .inside-content div,
 .inside-content p,
