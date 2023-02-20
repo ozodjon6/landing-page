@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Farkhod.com</title>
+  <title>Presentation page</title>
   <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
@@ -32,16 +32,19 @@
               <div class="project-model__content">
                 <div class="project-model__image">
                   <img src="./assets/image/hero-image.png" srcset="./assets/image/hero-image@2x.png" alt="Image">
+                  <span class="project-model__caption body-paragraph regular">Current design</span>
                 </div>
               </div>
             </div>
           </section>
           <section class="about-project">
             <div class="container">
-              <div class="row align-items-center">
+              <div class="row align-items-start">
+                <div class="col-12">
+                  <h4 class="title">About project</h4>
+                </div>
                 <div class="col-12 col-md-8 col-lg-7">
                   <div class="about-project__info">
-                    <h4 class="title">About project</h4>
                     <span class="body-paragraph body-m regular">
                       Moneff is fintech company in the United Kingdom. Main products are multicurrecy bank accounts, FX
                       and merchant.
@@ -63,7 +66,7 @@
                     </div>
                     <div class="about-project__role-item">
                       <span class="body-paragraph body-s regular">Company</span>
-                      <strong class="body-paragraph body-m">
+                      <strong class="about-project__link body-m">
                         <a href="https://moneff.com/" target="_blank">Moneff.com</a>
                       </strong>
                     </div>
@@ -141,49 +144,7 @@
           <section class="selected-projects pb18">
             <div class="container">
               <h2 class="title">Other projects</h2>
-              <div class="selected-projects__content">
-                <a href="#" class="selected-projects__item">
-                  <div class="selected-projects__heading">
-                    <h4 class="title">Banking startup onboarding</h4>
-                    <svg class="icon" width="20" height="7">
-                      <use xlink:href="./assets/icons/sprite.svg#arrow"></use>
-                    </svg>
-                  </div>
-                  <span class="body-paragraph body-s">
-                    Rebuild banking onboarding customer service. Improving customer expirience and increasing metris.
-                  </span>
-                </a>
-                <a href="#" class="selected-projects__item">
-                  <div class="selected-projects__heading">
-                    <h4 class="title">Fintech web application</h4>
-                    <svg class="icon" width="20" height="7">
-                      <use xlink:href="./assets/icons/sprite.svg#arrow"></use>
-                    </svg>
-                  </div>
-                  <span class="body-paragraph body-s">
-                    Build a new banking web app in United Kingdom market.
-                  </span>
-                </a>
-                <a href="#" class="selected-projects__item">
-                  <div class="selected-projects__heading">
-                    <h4 class="title">Mobile baking application</h4>
-                    <svg class="icon" width="20" height="7">
-                      <use xlink:href="./assets/icons/sprite.svg#arrow"></use>
-                    </svg>
-                  </div>
-                  <span class="body-paragraph body-s">
-                    Android and iOS mobile banking application with team
-                  </span>
-                </a>
-                <a href="#" class="selected-projects__item">
-                  <div class="selected-projects__heading">
-                    <h4 class="title">Web site redesign</h4>
-                    <svg class="icon" width="20" height="7">
-                      <use xlink:href="./assets/icons/sprite.svg#arrow"></use>
-                    </svg>
-                  </div>
-                </a>
-              </div>
+              <!--#include virtual="parts/projects.html" -->
             </div>
           </section>
         </main>

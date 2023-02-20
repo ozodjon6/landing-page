@@ -94,6 +94,10 @@ body {
   color: var(--text-primary-colour);
   font-weight: 500;
 }
+body.position-fixed {
+  position: fixed;
+  top: 0;
+}
 
 .outer-wrapper {
   display: flex;

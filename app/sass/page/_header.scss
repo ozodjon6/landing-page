@@ -44,8 +44,8 @@
     & .logo__name_first {
       @include respond(mobilemini) {
         & .icon {
-          width: 68px;
-          height: 14px;
+          width: 85px;
+          height: 17px;
         }
       }
     }
@@ -95,7 +95,7 @@
 
       & .menu-list__link {
         font-weight: 700;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 160%;
         color: var(--link-primary-colour);
         text-decoration: none;
@@ -153,11 +153,11 @@
       position: relative;
 
       span {
-        width: 30px;
+        width: 100%;
         height: 2px;
         background: var(--brand-primary-colour);
         transform: rotate(0deg);
-        transition: 0.25s ease-in-out;
+        transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
         cursor: pointer;
         position: absolute;
         left: 0;
@@ -166,15 +166,16 @@
 
         &:nth-child(1) {
           top: 0;
+          width: 50%;
         }
 
         &:nth-child(2) {
           top: 6px;
-          transform: translateX(-6px);
         }
 
         &:nth-child(3) {
           top: 12px;
+          width: 22px;
         }
       }
     }
@@ -182,12 +183,23 @@
 
   .hamburger.open-modal {
     @include respond(mobilemini) {
+      &::before {
+        content: '';
+        position: absolute;
+        transform: translateY(-30%);
+        padding: 15px 0;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      }
       span {
         width: 20px;
         left: 20%;
         &:nth-child(1) {
           top: 0;
-          display: none;
+          left: 50%;
+          opacity: 0;
         }
 
         &:nth-child(2) {
