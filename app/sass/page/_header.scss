@@ -153,8 +153,20 @@
 
   .hamburger {
     display: none;
+    position: relative;
 
     @include respond(mobilemini) {
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 10px;
+        transform: translate(-20%, -30%);
+      }
+
       display: flex;
       align-items: center;
       justify-content: center;
@@ -180,16 +192,15 @@
 
         &:nth-child(1) {
           top: 0;
-          width: 50%;
         }
 
         &:nth-child(2) {
           top: 6px;
+          transform: translateX(-6px);
         }
 
         &:nth-child(3) {
           top: 12px;
-          width: 22px;
         }
       }
     }
