@@ -87,7 +87,9 @@ body {
 }
 body.position-fixed {
   position: fixed;
-  top: 0
+  top: 0;
+  left: 0;
+  width: 100%
 }
 .outer-wrapper {
   display: -webkit-box;
@@ -435,11 +437,21 @@ template {
   max-width: 100px;
   min-height: 26px
 }
+@media (max-width:767px) {
+  .header__logo {
+    min-height: auto
+  }
+}
 .header__logo .site-logo {
   display: block;
   position: relative;
   min-height: inherit;
   z-index: 101
+}
+@media (max-width:767px) {
+  .header__logo .site-logo {
+    min-height: auto
+  }
 }
 .header__logo .site-logo:hover {
   cursor: pointer
@@ -450,6 +462,11 @@ template {
 .header__logo .site-logo:hover .logo__name_first {
   opacity: 0
 }
+@media (max-width:767px) {
+  .header__logo .site-logo:hover .logo__name_first {
+    opacity: 1
+  }
+}
 .header__logo .site-logo .logo__name {
   position: absolute;
   top: 0;
@@ -457,6 +474,11 @@ template {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s
+}
+@media (max-width:767px) {
+  .header__logo .site-logo .logo__name {
+    position: unset
+  }
 }
 @media (max-width:767px) {
   .header__logo .site-logo .logo__name_first .icon {
@@ -468,8 +490,8 @@ template {
   opacity: 0
 }
 @media (max-width:767px) {
-  .header__logo .site-logo .logo__name_last .icon {
-    height: 20px
+  .header__logo .site-logo .logo__name_last {
+    display: none
   }
 }
 .header__menu {
