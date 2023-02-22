@@ -61,7 +61,7 @@
     }
 
     a {
-        color: var(--text-secondary-colour);
+        color: var(--link-primary-colour);
     }
 
     @include respond(mobilemini) {
@@ -151,7 +151,7 @@
     }
 
     ul {
-        padding-left: 15px;
+        padding-left: 23px;
         margin-bottom: 24px;
         li {
             letter-spacing: -0.01em;
@@ -162,7 +162,7 @@
             list-style-type: inherit;
 
                 &:not(:last-child) {
-                    margin-bottom: 8px;
+                    margin-bottom: 12px;
                 }
 
                 a {

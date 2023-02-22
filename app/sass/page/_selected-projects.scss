@@ -14,9 +14,9 @@
         }
 
         &:hover .selected-projects__heading svg{
-            opacity: 1;
             left: 100%;
             margin-left: 8px;
+            opacity: 1;
         }
 
         &:hover h4.title {
@@ -30,6 +30,8 @@
         .selected-projects__heading {
             display: flex;
             align-items: center;
+            max-width: 49.8rem;
+            width: 100%;
 
             h4.title {
                 position: relative;
@@ -37,11 +39,15 @@
 
             svg {
                 opacity: 0;
-                left: 90%;
+                left: 99%;
                 position: absolute;
                 top: 50%;
                 z-index: -1;
             }
+        }
+        .body-paragraph {
+            max-width: 49.8rem;
+            width: 100%;
         }
         h4.title {
             color: var(--link-primary-colour);
