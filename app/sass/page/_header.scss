@@ -84,6 +84,10 @@
   display: flex;
   align-items: center;
 
+  @include respond(mobilemini) {
+    justify-content: flex-end;
+  }
+
   .menu-list {
     display: flex;
     align-items: center;
@@ -104,11 +108,15 @@
 
     @include respond(mobilemini) {
       opacity: 0;
+      width: 0%;
       transition: transform 0.3s ease;
       transform: translateX(-50%);
     }
 
     & .menu-list__item {
+      @include respond(mobilemini) {
+        width: 0;
+      }
       &:not(:last-child) {
         margin-right: 56px;
       }
@@ -155,6 +163,11 @@
       }
 
       & .menu-list__item {
+        width: auto;
+
+        &:not(:last-child) {
+          margin-right: 0;
+        }
 
         & .menu-list__link {
           color: var(--link-primary-colour);
