@@ -92,25 +92,62 @@
     display: flex;
     align-items: center;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 145%;
-      height: 100%;
-      background-color: var(--bg-primary-colour);
-      z-index: -1;
-      clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-      transform: translateX(-100%);
-      transition: transform ease 0.3s ;
-    }
-
     @include respond(mobilemini) {
-      opacity: 0;
-      width: 0%;
-      transition: transform 0.3s ease;
-      transform: translateX(-50%);
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        transition-delay: 0.1s;
+        transition: transform 0.4s ease;
+        transform: translateX(-100%);
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 145%;
+          height: 100%;
+          background-color: var(--bg-primary-colour);
+          z-index: -1;
+          clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+          transform: translateX(-100%);
+          transition: transform ease 0.4s;
+          z-index: -1;
+        }
+  
+        &:hover {
+          cursor: pointer;
+        }
+  
+        &::before {
+          transform: none;
+        }
+  
+        & .menu-list__item {
+          width: auto;
+  
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+  
+          & .menu-list__link {
+            color: var(--link-primary-colour);
+          }
+          &:not(:last-child) {
+            margin-bottom: 4rem;
+            margin-right: 0;
+          }
+        }
     }
 
     & .menu-list__item {
@@ -136,45 +173,6 @@
 
         &:hover {
           color: var(--link-primary-hover-colour);
-        }
-      }
-    }
-  }
-
-  @include respond(mobilemini) {
-    .menu-list.open-modal {
-      display: flex;
-      position: fixed;
-      transition: all 0.3s ease;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      width: 100%;
-      height: 100%;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      transform: translateX(0%);
-      opacity: 1;
-
-      &::before {
-        transform: none;
-      }
-
-      & .menu-list__item {
-        width: auto;
-
-        &:not(:last-child) {
-          margin-right: 0;
-        }
-
-        & .menu-list__link {
-          color: var(--link-primary-colour);
-        }
-        &:not(:last-child) {
-          margin-bottom: 4rem;
-          margin-right: 0;
         }
       }
     }
@@ -235,7 +233,52 @@
     }
   }
 
-  .hamburger.open-modal {
+  & .site-sphere {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 56px;
+    background: var(--brand-gradient-primary-colour);
+
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+}
+
+.header__menu.open-modal {
+  .menu-list {
+    transform: none;
+
+    & .menu-list__item {
+      @include respond(mobilemini) {
+        width: auto;
+      }
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+
+      & .menu-list__link {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 160%;
+        color: var(--link-primary-colour);
+        text-decoration: none;
+        transition: all 0.3s;
+        letter-spacing: -0.01em;
+
+        @include respond(mobilemini) {
+          color: var(--link-primary-colour);
+        }
+
+        &:hover {
+          color: var(--link-primary-hover-colour);
+        }
+      }
+    }
+  }
+
+  .hamburger {
     @include respond(mobilemini) {
       &::before {
         content: '';
@@ -265,18 +308,6 @@
           transform: rotate(-45deg);
         }
       }
-    }
-  }
-
-  & .site-sphere {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-left: 56px;
-    background: var(--brand-gradient-primary-colour);
-
-    @include respond(tablet) {
-      display: none;
     }
   }
 }

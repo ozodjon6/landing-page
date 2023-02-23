@@ -32,6 +32,11 @@
 
     .about-project__link {
         color: var(--link-primary-colour);
+        transition: all 0.3s ease-in;
+
+        &:hover a {
+            color: var(--link-primary-hover-colour);
+        }
     }
 }
 
