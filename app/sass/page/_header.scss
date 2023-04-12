@@ -18,10 +18,11 @@
 
 .header__logo {
   width: 100%;
-  max-width: 100px;
-  min-height: 26px;
+  max-width: 177px;
+  min-height: 28px;
 
   @include respond(mobilemini) {
+    max-width: 125px;
     min-height: auto;
   }
 
@@ -31,50 +32,19 @@
     min-height: inherit;
     z-index: 101;
 
-    @include respond(mobilemini) {
-      min-height: auto;
-    }
-
     &:hover {
       cursor: pointer;
     }
 
-    &:hover .logo__name_last {
-      opacity: 1;
-    }
-    &:hover .logo__name_first {
-      opacity: 0;
-
-      @include respond(mobilemini) {
-        opacity: 1;
-      }
+    &:hover svg path {
+      fill: var(--link-secondary-hover-colour);
     }
 
-    & .logo__name {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: all 0.3s;
-
-      @include respond(mobilemini) {
-        position: unset;
-      }
-    }
-
-    & .logo__name_first {
-      @include respond(mobilemini) {
-        & .icon {
-          width: 85px;
-          height: 17px;
-        }
-      }
-    }
-
-    & .logo__name_last {
-      opacity: 0;
-
-      @include respond(mobilemini) {
-        display: none;
+    @include respond(mobilemini) {
+      svg {
+        min-height: auto;
+        width: 125px;
+        height: 20px;
       }
     }
   }
@@ -93,61 +63,61 @@
     align-items: center;
 
     @include respond(mobilemini) {
-        display: flex;
-        position: fixed;
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      transition-delay: 0.1s;
+      transition: transform 0.4s ease;
+      transform: translateX(-100%);
+
+      &::before {
+        content: "";
+        position: absolute;
         top: 0;
         left: 0;
-        right: 0;
-        z-index: 100;
-        width: 100%;
+        width: 145%;
         height: 100%;
-        overflow: hidden;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        overflow: hidden;
-        transition-delay: 0.1s;
-        transition: transform 0.4s ease;
+        background-color: var(--bg-primary-colour);
+        z-index: -1;
+        clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
         transform: translateX(-100%);
+        transition: transform ease 0.4s;
+        z-index: -1;
+      }
 
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 145%;
-          height: 100%;
-          background-color: var(--bg-primary-colour);
-          z-index: -1;
-          clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-          transform: translateX(-100%);
-          transition: transform ease 0.4s;
-          z-index: -1;
+      &:hover {
+        cursor: pointer;
+      }
+
+      &::before {
+        transform: none;
+      }
+
+      & .menu-list__item {
+        width: auto;
+
+        &:not(:last-child) {
+          margin-right: 0;
         }
-  
-        &:hover {
-          cursor: pointer;
+
+        & .menu-list__link {
+          color: var(--link-primary-colour);
         }
-  
-        &::before {
-          transform: none;
+        &:not(:last-child) {
+          margin-bottom: 4rem;
+          margin-right: 0;
         }
-  
-        & .menu-list__item {
-          width: auto;
-  
-          &:not(:last-child) {
-            margin-right: 0;
-          }
-  
-          & .menu-list__link {
-            color: var(--link-primary-colour);
-          }
-          &:not(:last-child) {
-            margin-bottom: 4rem;
-            margin-right: 0;
-          }
-        }
+      }
     }
 
     & .menu-list__item {
@@ -183,9 +153,8 @@
     position: relative;
 
     @include respond(mobilemini) {
-
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -281,7 +250,7 @@
   .hamburger {
     @include respond(mobilemini) {
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         transform: translateY(-30%);
         padding: 15px 0;

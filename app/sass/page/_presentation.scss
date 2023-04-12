@@ -31,6 +31,8 @@
     }
 
     .about-project__link {
+        display: flex;
+        align-items: center;
         color: var(--link-primary-colour);
         transition: all 0.3s ease-in;
 
@@ -58,6 +60,10 @@
 // about-project__role
 
 .about-project__role-item {
+
+    &:hover strong svg {
+        opacity: 1;
+    }
     &:not(:last-child) {
         margin-bottom: 24px;
     }
@@ -67,6 +73,18 @@
 
     a {
         color: var(--link-primary-colour);
+    }
+
+    strong {
+        display: flex;
+        align-items: center;
+
+        svg {
+            transform: rotate(-45deg);
+            margin-left: 8px;
+            transition: all .3s;
+            opacity: 0;
+        }
     }
 
     @include respond(mobilemini) {
@@ -155,7 +173,7 @@
         }
     }
 
-    ul {
+    ul,ol {
         padding-left: 23px;
         margin-bottom: 24px;
         li {
@@ -190,5 +208,9 @@
         line-height: 160%;
         letter-spacing: -0.01em;
         color: var(--text-secondary-colour);
+    }
+
+    p:not(:last-child) {
+        margin-bottom: 12px;
     }
 }

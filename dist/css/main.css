@@ -442,11 +442,12 @@ template {
 }
 .header__logo {
   width: 100%;
-  max-width: 100px;
-  min-height: 26px
+  max-width: 177px;
+  min-height: 28px
 }
 @media (max-width:767px) {
   .header__logo {
+    max-width: 125px;
     min-height: auto
   }
 }
@@ -456,50 +457,17 @@ template {
   min-height: inherit;
   z-index: 101
 }
-@media (max-width:767px) {
-  .header__logo .site-logo {
-    min-height: auto
-  }
-}
 .header__logo .site-logo:hover {
   cursor: pointer
 }
-.header__logo .site-logo:hover .logo__name_last {
-  opacity: 1
-}
-.header__logo .site-logo:hover .logo__name_first {
-  opacity: 0
+.header__logo .site-logo:hover svg path {
+  fill: var(--link-secondary-hover-colour)
 }
 @media (max-width:767px) {
-  .header__logo .site-logo:hover .logo__name_first {
-    opacity: 1
-  }
-}
-.header__logo .site-logo .logo__name {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s
-}
-@media (max-width:767px) {
-  .header__logo .site-logo .logo__name {
-    position: unset
-  }
-}
-@media (max-width:767px) {
-  .header__logo .site-logo .logo__name_first .icon {
-    width: 85px;
-    height: 17px
-  }
-}
-.header__logo .site-logo .logo__name_last {
-  opacity: 0
-}
-@media (max-width:767px) {
-  .header__logo .site-logo .logo__name_last {
-    display: none
+  .header__logo .site-logo svg {
+    min-height: auto;
+    width: 125px;
+    height: 20px
   }
 }
 .header__menu {
@@ -657,7 +625,7 @@ template {
     position: relative
   }
   .header__menu .hamburger::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -742,7 +710,7 @@ template {
 }
 @media (max-width:767px) {
   .header__menu.open-modal .hamburger::before {
-    content: '';
+    content: "";
     position: absolute;
     -webkit-transform: translateY(-30%);
     -ms-transform: translateY(-30%);
@@ -1134,6 +1102,12 @@ only screen and (min-device-pixel-ratio:1.5) {
   margin-bottom: 24px
 }
 .about-project .about-project__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: var(--link-primary-colour);
   -webkit-transition: all .3s ease-in;
   -o-transition: all .3s ease-in;
@@ -1159,6 +1133,9 @@ only screen and (min-device-pixel-ratio:1.5) {
   color: var(--text-primary-colour);
   margin-bottom: 24px
 }
+.about-project__role-item:hover strong svg {
+  opacity: 1
+}
 .about-project__role-item:not(:last-child) {
   margin-bottom: 24px
 }
@@ -1167,6 +1144,24 @@ only screen and (min-device-pixel-ratio:1.5) {
 }
 .about-project__role-item a {
   color: var(--link-primary-colour)
+}
+.about-project__role-item strong {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.about-project__role-item strong svg {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-left: 8px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  opacity: 0
 }
 @media (max-width:767px) {
   .about-project__role-item .body-m {
@@ -1255,10 +1250,12 @@ only screen and (min-device-pixel-ratio:1.5) {
 .inside-content img:first-child {
   margin-bottom: 12rem
 }
+.inside-content ol,
 .inside-content ul {
   padding-left: 23px;
   margin-bottom: 24px
 }
+.inside-content ol li,
 .inside-content ul li {
   letter-spacing: -.01em;
   font-weight: 400;
@@ -1267,9 +1264,11 @@ only screen and (min-device-pixel-ratio:1.5) {
   color: var(--link-primary-colour);
   list-style-type: inherit
 }
+.inside-content ol li:not(:last-child),
 .inside-content ul li:not(:last-child) {
   margin-bottom: 12px
 }
+.inside-content ol li a,
 .inside-content ul li a {
   color: inherit;
   text-decoration: underline;
@@ -1277,6 +1276,7 @@ only screen and (min-device-pixel-ratio:1.5) {
   -o-transition: all .3s;
   transition: all .3s
 }
+.inside-content ol li a:hover,
 .inside-content ul li a:hover {
   color: var(--link-primary-hover-colour);
   text-decoration: none
@@ -1289,5 +1289,8 @@ only screen and (min-device-pixel-ratio:1.5) {
   line-height: 160%;
   letter-spacing: -.01em;
   color: var(--text-secondary-colour)
+}
+.inside-content p:not(:last-child) {
+  margin-bottom: 12px
 }
 /*# sourceMappingURL=app/css/main.css.map */
