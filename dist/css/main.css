@@ -808,7 +808,8 @@ template {
   color: var(--link-primary-hover-colour)
 }
 .about .about__title {
-  margin-bottom: 24px
+  margin-bottom: 24px;
+  color: var(--text-secondary-colour)
 }
 @media (max-width:767px) {
   .about .about__title {
