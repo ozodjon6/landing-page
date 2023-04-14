@@ -1,0 +1,216 @@
+.project-model {
+    margin-bottom: 12rem;
+}
+.project-model__heading {
+    max-width: 81.6rem;
+    margin-bottom: 4rem;
+    h1.title {
+        margin-bottom: 24px;
+    }
+}
+
+.project-model__content {
+    .project-model__image {
+        width: 100%;
+    }
+    .project-model__caption {
+        text-align: center;
+        display: block;
+        margin-top: 8px;
+        font-size: 13px;
+    }
+}
+
+// about-project
+
+.about-project {
+    margin-bottom: 12rem;
+
+    h4.title {
+        margin-bottom: 24px;
+    }
+
+    .about-project__link {
+        display: flex;
+        align-items: center;
+        color: var(--link-primary-colour);
+        transition: all 0.3s ease-in;
+
+        &:hover a {
+            color: var(--link-primary-hover-colour);
+        }
+    }
+}
+
+.about-project__info {
+    max-width: 498px;
+
+    @include respond(tablet) {
+        max-width: 397px;
+      }
+      @include respond(mobilemini) {
+        padding-bottom: 12rem;
+      }
+    h4.title {
+        color: var(--text-primary-colour);
+        margin-bottom: 24px;
+    }
+}
+
+// about-project__role
+
+.about-project__role-item {
+
+    &:hover strong svg {
+        color: var(--link-primary-hover-colour);
+    }
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+    span {
+        display: block;
+    }
+
+    a {
+        color: var(--link-primary-colour);
+    }
+
+    strong {
+        display: flex;
+        align-items: center;
+
+        svg {
+            transform: rotate(-45deg);
+            margin-left: 8px;
+            transition: all .3s;
+            color: var(--link-primary-colour);
+        }
+    }
+
+    @include respond(mobilemini) {
+      .body-m {
+        font-size: 16px;
+      }
+    }
+}
+
+// inside-content
+
+.inside-content {
+    margin-bottom: 18rem;
+
+    @include respond(mobilemini) {
+      margin-bottom: 12rem;
+    }
+
+    .inside-content__item {
+        &:not(:last-child) {
+            margin-bottom: 12rem
+        }
+    }
+    h1,h2,h3,h4,h5,h6 {
+        @include bold;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: var(--text-primary-colour);
+        margin-bottom: 24px;
+    }
+
+    h1 {
+        font-size: 46px;
+
+        @include respond(mobilemini) {
+          font-size: 24px;
+        }
+    }
+    h2 {
+        font-size: 32px;
+
+        @include respond(mobilemini) {
+          font-size: 22px;
+        }
+    }
+    h3 {
+        font-size: 28px;
+
+        @include respond(mobilemini) {
+          font-size: 20px;
+        }
+    }
+    h4 {
+        font-size: 24px;
+
+        @include respond(mobilemini) {
+          font-size: 18px;
+        }
+    }
+    h5 {
+        font-size: 20px;
+
+        @include respond(mobilemini) {
+          font-size: 16px;
+        }
+    }
+    h6 {
+        font-size: 18px;
+
+        @include respond(mobilemini) {
+          font-size: 16px;
+        }
+    }
+    
+    iframe {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        margin-bottom: 24px;
+
+        &:first-child {
+            margin-bottom: 12rem;
+        }
+    }
+
+    ul,ol {
+        padding-left: 23px;
+        margin-bottom: 24px;
+        li {
+            letter-spacing: -0.01em;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 160%;
+            color: var(--link-primary-colour);
+            list-style-type: inherit;
+
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+
+                a {
+                    color: inherit;
+                    text-decoration: underline;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        color: var(--link-primary-hover-colour);
+                        text-decoration: none;
+                    }
+                }
+            }
+        
+    }
+
+    p,span,div {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 160%;
+        letter-spacing: -0.01em;
+        color: var(--text-secondary-colour);
+    }
+
+    p:not(:last-child) {
+        margin-bottom: 12px;
+    }
+}

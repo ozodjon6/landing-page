@@ -1,0 +1,86 @@
+.about {
+
+    .about__title {
+        margin-bottom: 24px;
+
+        @include respond(mobilemini) {
+          margin-bottom: 16px;
+        }
+    }
+    .about__img {
+        max-width: 300px;
+        width: 100%;
+        height: 40px;
+        position: relative;
+        transition: all 0.4s;
+
+        &::before {
+          content: '';
+          position: absolute;
+          padding: 20px 0;
+          width: 100%;
+          background-color: transparent;
+          transition: all 0.3s;
+          top: 0;
+          left: 0;
+        }
+
+        @include respond(mobilemini) {
+          max-width: 169px;
+          height: 32px;
+        }
+
+        &:hover {
+            cursor: auto;
+        }
+
+        &:hover::before{
+          padding: 150px 0;
+          transform: translateY(-43%);
+      }
+
+        &:hover .author-image {
+            cursor: pointer;
+            height: 303px;
+            transform: translateY(-50%);
+
+            @include respond(mobilemini) {
+              height: 173px;
+            }
+        }
+
+        .author-image {
+            background-image: url(../assets/image/avatar.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+            transition: height 0.4s;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+            only screen and (-moz-min-device-pixel-ratio: 1.5),
+            only screen and (-o-min-device-pixel-ratio: 3/2),
+            only screen and (min-device-pixel-ratio: 1.5) {
+              .author-image {
+                background-image: url(../assets/image/avatar@2x.png);
+              }
+            }
+    }
+
+    h1.title {
+        margin-top: 12px;
+        max-width: 816px;
+        width: 100%;
+
+        @include respond(mobilemini) {
+          margin-top: 16px;
+        }
+    }
+}
