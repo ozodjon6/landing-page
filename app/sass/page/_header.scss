@@ -32,12 +32,16 @@
     min-height: inherit;
     z-index: 101;
 
+    svg {
+      color: var(--text-primary-colour);
+    }
+
     &:hover {
       cursor: pointer;
     }
 
-    &:hover svg path {
-      fill: var(--link-secondary-hover-colour);
+    &:hover svg {
+      color: var(--link-secondary-hover-colour);
     }
 
     @include respond(mobilemini) {

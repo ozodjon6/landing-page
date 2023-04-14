@@ -38,6 +38,7 @@
                 left: 100%;
                 margin-left: 8px;
                 opacity: 1;
+                color: var(--link-primary-hover-colour);
             }
     
             &:hover h4.title {
@@ -59,6 +60,7 @@
                 position: absolute;
                 top: 50%;
                 z-index: -1;
+                color: var(--link-primary-colour);
             }
         }
         h4.title {

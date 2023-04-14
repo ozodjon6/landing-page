@@ -62,7 +62,7 @@
 .about-project__role-item {
 
     &:hover strong svg {
-        opacity: 1;
+        color: var(--link-primary-hover-colour);
     }
     &:not(:last-child) {
         margin-bottom: 24px;
@@ -83,7 +83,7 @@
             transform: rotate(-45deg);
             margin-left: 8px;
             transition: all .3s;
-            opacity: 0;
+            color: var(--link-primary-colour);
         }
     }
 

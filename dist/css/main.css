@@ -457,11 +457,14 @@ template {
   min-height: inherit;
   z-index: 101
 }
+.header__logo .site-logo svg {
+  color: var(--text-primary-colour)
+}
 .header__logo .site-logo:hover {
   cursor: pointer
 }
-.header__logo .site-logo:hover svg path {
-  fill: var(--link-secondary-hover-colour)
+.header__logo .site-logo:hover svg {
+  color: var(--link-secondary-hover-colour)
 }
 @media (max-width:767px) {
   .header__logo .site-logo svg {
@@ -936,7 +939,8 @@ only screen and (min-device-pixel-ratio:1.5) {
 .selected-projects .selected-projects__item .selected-projects__inner:hover .selected-projects__heading svg {
   left: 100%;
   margin-left: 8px;
-  opacity: 1
+  opacity: 1;
+  color: var(--link-primary-hover-colour)
 }
 .selected-projects .selected-projects__item .selected-projects__inner:hover h4.title {
   color: var(--link-primary-hover-colour)
@@ -957,7 +961,8 @@ only screen and (min-device-pixel-ratio:1.5) {
   left: 99%;
   position: absolute;
   top: 50%;
-  z-index: -1
+  z-index: -1;
+  color: var(--link-primary-colour)
 }
 .selected-projects .selected-projects__item h4.title {
   color: var(--link-primary-colour)
@@ -1013,7 +1018,8 @@ only screen and (min-device-pixel-ratio:1.5) {
   cursor: pointer
 }
 .portfolio-wrap_social .portfolio-wrap__item .portfolio-wrap__link:hover svg {
-  opacity: 1
+  opacity: 1;
+  color: var(--link-primary-hover-colour)
 }
 .portfolio-wrap_social .portfolio-wrap__item .portfolio-wrap__link:hover h4.title {
   color: var(--link-primary-hover-colour)
@@ -1023,7 +1029,8 @@ only screen and (min-device-pixel-ratio:1.5) {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   margin-left: 8px;
-  opacity: 0
+  opacity: 0;
+  color: var(--link-primary-colour)
 }
 .portfolio-wrap__item {
   -webkit-transition: all .3s;
@@ -1042,7 +1049,8 @@ only screen and (min-device-pixel-ratio:1.5) {
   cursor: pointer
 }
 .portfolio-wrap__item:hover .portfolio-wrap__heading svg {
-  opacity: 1
+  opacity: 1;
+  color: var(--link-primary-hover-colour)
 }
 .portfolio-wrap__item:hover .portfolio-wrap__heading h6.title {
   color: var(--link-primary-hover-colour)
@@ -1071,7 +1079,8 @@ only screen and (min-device-pixel-ratio:1.5) {
   opacity: 0;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg)
+  transform: rotate(-45deg);
+  color: var(--link-primary-colour)
 }
 .portfolio-wrap__content {
   margin-top: 4px
@@ -1134,7 +1143,7 @@ only screen and (min-device-pixel-ratio:1.5) {
   margin-bottom: 24px
 }
 .about-project__role-item:hover strong svg {
-  opacity: 1
+  color: var(--link-primary-hover-colour)
 }
 .about-project__role-item:not(:last-child) {
   margin-bottom: 24px
@@ -1161,7 +1170,7 @@ only screen and (min-device-pixel-ratio:1.5) {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
-  opacity: 0
+  color: var(--link-primary-colour)
 }
 @media (max-width:767px) {
   .about-project__role-item .body-m {

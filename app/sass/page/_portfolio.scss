@@ -39,6 +39,7 @@
         
             &:hover svg {
                 opacity: 1;
+                color: var(--link-primary-hover-colour);
             }
         
             &:hover h4.title {
@@ -50,6 +51,7 @@
             transform: rotate(-45deg);
             margin-left: 8px;
             opacity: 0;
+            color: var(--link-primary-colour);
         }
     }
 }
@@ -71,6 +73,7 @@
 
     &:hover .portfolio-wrap__heading svg {
         opacity: 1;
+        color: var(--link-primary-hover-colour);
     }
 
     &:hover .portfolio-wrap__heading h6.title {
@@ -98,6 +101,7 @@
         transition: all 0.3s;
         opacity: 0;
         transform: rotate(-45deg);
+        color: var(--link-primary-colour);
     }
 }
 
