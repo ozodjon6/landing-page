@@ -11,7 +11,7 @@
     justify-content: space-between;
 
     @include respond(mobilemini) {
-      height: 26px;
+      height: 20px;
     }
   }
 }
@@ -31,6 +31,11 @@
     position: relative;
     min-height: inherit;
     z-index: 101;
+    height: 28px;
+
+    @include respond(mobilemini) {
+      height: 20px;
+    }
 
     svg {
       color: var(--text-primary-colour);

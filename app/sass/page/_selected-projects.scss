@@ -39,6 +39,10 @@
                 margin-left: 8px;
                 opacity: 1;
                 color: var(--link-primary-hover-colour);
+
+                @include respond(mobilemini) {
+                  left: 102%;
+                }
             }
     
             &:hover h4.title {
@@ -61,6 +65,12 @@
                 top: 50%;
                 z-index: -1;
                 color: var(--link-primary-colour);
+
+                @include respond(mobilemini) {
+                  opacity: 1;
+                  left: 100%;
+                  margin-left: 8px;
+                }
             }
         }
         h4.title {
