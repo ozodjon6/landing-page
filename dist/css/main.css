@@ -1002,13 +1002,8 @@ only screen and (min-device-pixel-ratio:1.5) {
   }
 }
 .selected-projects .selected-projects__img {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   display: block
-}
-@media (max-width:768px) {
-  .selected-projects .selected-projects__img {
-    margin-bottom: 16px
-  }
 }
 .selected-projects__content .row .col-12:not(:last-child) {
   margin-bottom: 64px

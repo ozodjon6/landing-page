@@ -88,12 +88,8 @@
     }
 
     .selected-projects__img {
-        margin-bottom: 24px;
+        margin-bottom: 16px;
         display: block;
-
-        @include respond(phone) {
-          margin-bottom: 16px;
-        }
     }
 }
 
