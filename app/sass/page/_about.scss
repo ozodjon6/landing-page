@@ -2,6 +2,7 @@
 
     .about__title {
         margin-bottom: 24px;
+        color: var(--text-secondary-colour);
 
         @include respond(mobilemini) {
           margin-bottom: 16px;

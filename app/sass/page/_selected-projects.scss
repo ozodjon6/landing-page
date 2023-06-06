@@ -1,24 +1,22 @@
 .selected-projects {
     h2.title {
-        margin-bottom: 4rem;
+        margin-bottom: 6.4rem;
+
+        @include respond(phone) {
+          margin-bottom: 4rem;
+        }
+
+        @include respond(mobilemini) {
+          margin-bottom: 3.2rem;
+        }
     }
 
     .selected-projects__item {
-        border-top: 1px solid var(--border);
         transition: all 0.3s;
-        padding: 32px 0;
         display: block;
-
-        @include respond(mobilemini) {
-          padding: 24px 0;
-        }
 
         &:hover {
             cursor: auto;
-        }
-
-        &:last-child {
-            border-bottom: 1px solid var(--border);
         }
 
         .selected-projects__inner {
@@ -26,7 +24,7 @@
             max-width: 49.8rem;
             width: 100%;
 
-            @include respond(mobilemini) {
+            @include respond(phone) {
               max-width: 100%;
             }
 
@@ -39,6 +37,10 @@
                 margin-left: 8px;
                 opacity: 1;
                 color: var(--link-primary-hover-colour);
+
+                @include respond(mobilemini) {
+                  left: 102%;
+                }
             }
     
             &:hover h4.title {
@@ -49,6 +51,8 @@
         .selected-projects__heading {
             display: flex;
             align-items: center;
+            width: 100%;
+            max-width: 390px;
 
             h4.title {
                 position: relative;
@@ -61,6 +65,12 @@
                 top: 50%;
                 z-index: -1;
                 color: var(--link-primary-colour);
+
+                @include respond(mobilemini) {
+                  opacity: 1;
+                  left: 100%;
+                  margin-left: 8px;
+                }
             }
         }
         h4.title {
@@ -74,6 +84,19 @@
             @include respond(mobilemini) {
               margin-top: 4px;
             }
+        }
+    }
+
+    .selected-projects__img {
+        margin-bottom: 16px;
+        display: block;
+    }
+}
+
+.selected-projects__content {
+    .row {
+        .col-12:not(:last-child) {
+            margin-bottom: 64px;
         }
     }
 }
