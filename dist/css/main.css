@@ -109,7 +109,8 @@ body.position-fixed {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 4rem 0
+  padding: 4rem 0;
+  min-height: 100vh
 }
 @media (max-width:1239px) {
   .outer-wrapper {
@@ -1388,5 +1389,29 @@ only screen and (min-device-pixel-ratio:1.5) {
     width: 25px;
     height: 50px
   }
+}
+.page-not-found {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.page-not-found h4.title {
+  color: var(--text-secondary-colour);
+  margin-bottom: 12px
+}
+@media (max-width:767px) {
+  .page-not-found h4.title {
+    margin-bottom: 16px
+  }
+}
+.page-not-found h1.title {
+  color: var(--text-primary-colour)
 }
 /*# sourceMappingURL=app/css/main.css.map */
