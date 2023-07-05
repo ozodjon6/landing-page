@@ -949,14 +949,13 @@ only screen and (min-device-pixel-ratio:1.5) {
   cursor: pointer
 }
 .selected-projects .selected-projects__item .selected-projects__inner:hover .selected-projects__heading svg {
-  left: 100%;
   margin-left: 8px;
   opacity: 1;
   color: var(--link-primary-hover-colour)
 }
 @media (max-width:767px) {
   .selected-projects .selected-projects__item .selected-projects__inner:hover .selected-projects__heading svg {
-    left: 102%
+    margin-left: 16px
   }
 }
 .selected-projects .selected-projects__item .selected-projects__inner:hover h4.title {
@@ -972,22 +971,25 @@ only screen and (min-device-pixel-ratio:1.5) {
   width: 100%;
   max-width: 390px
 }
+@media (max-width:767px) {
+  .selected-projects .selected-projects__item .selected-projects__heading {
+    max-width: 100%
+  }
+}
 .selected-projects .selected-projects__item .selected-projects__heading h4.title {
   position: relative
 }
 .selected-projects .selected-projects__item .selected-projects__heading svg {
   opacity: 0;
-  left: 99%;
-  position: absolute;
-  top: 50%;
   z-index: -1;
+  margin-bottom: 4px;
   color: var(--link-primary-colour)
 }
 @media (max-width:767px) {
   .selected-projects .selected-projects__item .selected-projects__heading svg {
     opacity: 1;
-    left: 100%;
-    margin-left: 8px
+    margin-left: 8px;
+    margin-bottom: 0
   }
 }
 .selected-projects .selected-projects__item h4.title {
@@ -1222,7 +1224,16 @@ only screen and (min-device-pixel-ratio:1.5) {
   margin-bottom: 12rem
 }
 .inside-content .inside-content__item .wp-block-image.border-radius-10 img {
-  border-radius: 10px
+  border-radius: 10px!important
+}
+.inside-content .inside-content__item .wp-block-image.border-radius-8 img {
+  border-radius: 8px!important
+}
+.inside-content .inside-content__item .wp-block-image.border-radius-6 img {
+  border-radius: 6px!important
+}
+.inside-content .inside-content__item .wp-block-image.border-radius-4 img {
+  border-radius: 4px!important
 }
 .inside-content h1,
 .inside-content h2,

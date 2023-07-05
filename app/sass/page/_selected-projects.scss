@@ -33,13 +33,12 @@
             }
 
             &:hover .selected-projects__heading svg{
-                left: 100%;
                 margin-left: 8px;
                 opacity: 1;
                 color: var(--link-primary-hover-colour);
 
                 @include respond(mobilemini) {
-                  left: 102%;
+                  margin-left: 16px;
                 }
             }
     
@@ -54,22 +53,24 @@
             width: 100%;
             max-width: 390px;
 
+            @include respond(mobilemini) {
+              max-width: 100%;
+            }
+
             h4.title {
                 position: relative;
             }
 
             svg {
                 opacity: 0;
-                left: 99%;
-                position: absolute;
-                top: 50%;
                 z-index: -1;
+                margin-bottom: 4px;
                 color: var(--link-primary-colour);
 
                 @include respond(mobilemini) {
                   opacity: 1;
-                  left: 100%;
                   margin-left: 8px;
+                  margin-bottom: 0;
                 }
             }
         }
